@@ -12,9 +12,9 @@ Because Apple just can't get this right.  For as excellent as some of their prod
 
 One day I realized that a very, very critical note was missing from my iCloud sync'ed notes (perhaps I butt-deleted it?) and in a panic I called Apple Tech Support.  They were very friendly and offered to do a restore from their deep archival backup which would have unpredictale consequences for my iCloud account.  I was flabbergasted.  They don't have a DVCS that exploits CAS (the way git, mercurial, docker, etc. work) keeping track of everyone's stuff?  WTF?!  Do they just have a gigantic Oracle database that ticks forward for every update?
 
-I asked them for the proper procedure to backup iCloud Notes and what did they tell me?  _Go through them one by one manuall and cut and paste them into individual text files_  No kidding.  That was the official recommendation for backing up iCloud Notes.  Cut and paste.
+I asked them for the proper procedure to backup iCloud Notes and what did they tell me?  _Go through them one by one manually and cut and paste them into individual text files_.  No kidding.  That was the official recommendation for backing up iCloud Notes.  _Cut and paste_.
 
-Dismayed but not deterred, I spelunked the depths of my iPhone's backups, and even dug into the Time Machine backups of my laptop that contained even older versions of my iPhone backups.  I was able to finally reconstruct the missing note and set out to make sure this didn't happen again.
+Dismayed but not deterred, I spelunked the depths of my iPhone's backups, and even dug into the Time Machine backups of my laptop that contained even older versions of my iPhone backups.  I was able to finally reconstruct the missing note and then set out to make sure this didn't happen again.
 
 So here we are.
 
@@ -36,7 +36,7 @@ Writing x-coredata://XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/IMAPNote/p748 (Todo Li
 ...
 ```
 
-If you put this script in its own git repo, you could even automate the whole process with cron and doing something like `git add *; git commit -m"Sync for "`date +%Y%m%d%H%M%S``  (That's off the top of my head... you might want to test that and get back to me)
+If you put this script in its own git repo, you could even automate the whole process with cron and doing something like `git add *; git commit -m"Sync for "\`date +%Y%m%d%H%M%S\``  (That's off the top of my head... you might want to test that and get back to me)
 
 Oh, and sorry about that "failed to get scripting definition" warning.  OSA for Javascript is not well documented and there's a lot of sharp edges.  I expect that I'll continue to discover better ways of wrapping this up and making it cleaner, so hopefully this gets more refined over time.
 
