@@ -1,0 +1,6 @@
+Some helpful URLs:
+
+* http://developer.telerik.com/featured/javascript-os-x-automation-example/
+* Excellent guide: https://github.com/dtinth/JXA-Cookbook/wiki/Using-JavaScript-for-Automation
+
+For library of functions: in Script Editor, go to Library -> pick an app -> switch to JavaScript
